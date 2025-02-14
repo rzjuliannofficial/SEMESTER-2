@@ -14,7 +14,6 @@ public class prakArray {
         double ip;
 
 
-
         for (int i = 0; i < mk.length;) {
   
             System.out.print("Masukkan nilai Angka untuk MK "+mk[i]+": ");
@@ -63,15 +62,22 @@ public class prakArray {
         System.out.println("Hasil Konversi Nilai");
         System.out.println("==============================================");
         
-        System.out.println("MK\t\t\t\t\t\t Nilai Angka \t Nilai Huruf \t Bobot Nilai");
-        for (int i = 0; i < mk.length; i++) {
-            System.out.print("\n"+mk[i]+"\t\t\t\t\t");
-            System.out.print(nilai[i]);
-            System.out.print("\t\t"+nilaiHuruf[i]);
-            System.out.print("\t\t"+bobotNIlai[i]);
+        // System.out.println("MK\t\t\t\t\t\t Nilai Angka \t Nilai Huruf \t Bobot Nilai");
+        // for (int i = 0; i < mk.length; i++) {
+        //     System.out.print("\n"+mk[i]+"\t\t\t\t\t");
+        //     System.out.print(nilai[i]);
+        //     System.out.print("\t\t"+nilaiHuruf[i]);
+        //     System.out.print("\t\t"+bobotNIlai[i]);
             
+        // }
+
+        //AGAR TAMPILAN MENJADI RAPI
+        System.out.printf("%-45s %-15s %-15s %-15s %-10s%n", "MK", "Nilai Angka", "Nilai Huruf", "Bobot Nilai", "SKS");
+
+        for (int i = 0; i < mk.length; i++) {
+        System.out.printf("%-45s %-15s %-15s %-15s %-10s%n", mk[i], nilai[i], nilaiHuruf[i], bobotNIlai[i], sks[i]);
         }
-        System.out.println();
+
         System.out.println("=================================");
         
         ip= hasil / totalSKS;
